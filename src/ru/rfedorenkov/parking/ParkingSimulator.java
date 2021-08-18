@@ -67,7 +67,6 @@ public class ParkingSimulator {
             return Operation.PARK;
         }
 
-
         if (text.startsWith("u:[")) {
             ParkManager.setCommand(text);
             return Operation.LEAVE_SOME;
@@ -87,7 +86,7 @@ public class ParkingSimulator {
             return Operation.COUNT;
         }
 
-        if (text.matches("t:")) {
+        if (text.startsWith("t:")) {
             ParkManager.setCommand(text);
             return Operation.TIME;
         }
